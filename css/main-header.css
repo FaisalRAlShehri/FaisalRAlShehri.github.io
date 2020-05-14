@@ -1,0 +1,10 @@
+.mainheader {
+  display: grid;
+  grid-area: hd;
+  justify-content: center;
+  border-bottom: #222222 solid 3px;
+}
+
+.mainheader a {
+  text-decoration: none;
+}

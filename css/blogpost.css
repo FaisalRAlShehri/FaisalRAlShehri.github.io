@@ -1,0 +1,285 @@
+@import "main-generalsettings.css";
+@import "main-header.css";
+@import "main-footer.css";
+
+.wrapper{
+  background-color: #b19353;
+  margin: 1%;
+  display: grid;
+}
+
+p{
+  font-size: 1.09em;
+}
+
+.share{
+  font-size: 0.8em;
+}
+
+a{
+  color: #000000;
+}
+
+.mainheader {
+  background-color: #6fb9c5;
+}
+
+.sidebar {
+  display: grid;
+  background-color: #6fb9c5;
+  grid-area: sd;
+  padding-left: 6%;
+  width: 245px;
+  grid-template: 1fr 1fr/ 1fr;
+  grid-template-areas: "nav" "sub";
+  justify-content: center;
+  border: #222222 solid 1px;
+}
+
+.navigation {
+  grid-area: nav;
+}
+
+.subscription {
+  border-top: #222222 solid 1px;
+  grid-area: sub;
+}
+
+.content{
+  background-color: #b19353;
+  display: grid;
+  grid-area: cont;
+}
+
+.pic{
+  background-repeat: no-repeat;
+  margin: auto;
+  grid-area: pic;
+  object-fit: contain;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+}
+
+#atum{
+  background-image: url("../img/220px-Atum.svg.png");
+}
+
+#shu{
+  background-image: url("../img/220px-Shu_with_feather.svg.png");
+}
+
+#tefnut{
+  background-image: url("../img/Tefnut.png");
+}
+
+#geb{
+  background-image: url("../img/220px-Geb.svg.png");
+}
+
+#nut{
+  background-image: url("../img/220px-Nut.svg.png");
+}
+
+#osiris{
+  background-image: url("../img/220px-Standing_Osiris_edit1.svg.png");
+}
+
+#isis{
+  background-image: url("../img/220px-Isis.svg.png");
+}
+
+#set{
+  background-image: url("../img/220px-Set.svg.png");
+}
+
+#nephthys{
+  background-image: url("../img/220px-Nepthys.svg.png");
+}
+
+.footer {
+  background-color: #6fb9c5;
+}
+
+.article{
+  grid-area: art;
+}
+
+@media (min-width: 1500px) {
+  .wrapper {
+    grid-template: 120px 4fr 1.48fr 135px/ repeat(7, 1fr);
+    grid-template-areas: "hd hd hd hd hd hd hd" "sd cont cont cont cont cont cont" "xx cont cont cont cont cont cont" "ft ft ft ft ft ft ft";
+    border: #222222 solid 1px;
+  }
+
+  #gebside, #nutside{
+    font-size: 0.9em;
+  }
+
+  .content {
+    grid-template: 1fr/ repeat(5, 1fr);
+    grid-template-areas: "pic art art art art" "pic art art art art" "xx art art art art" "xx art art art art";
+  }
+
+  .article{
+    font-size: 1.07em;
+  }
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 1140px) and (max-width: 1499px) {
+  .wrapper {
+    grid-template: 120px 4fr 2fr 2fr 135px/ 1.2fr repeat(4, 1fr);
+    grid-template-areas: "hd hd hd hd hd" "sd cont cont cont cont" "xx cont cont cont cont"
+    "xx cont cont cont cont" "ft ft ft ft ft";
+    border: #222222 solid 1px;
+  }
+
+  .content{
+    grid-template: 3fr 2fr 2fr 2fr/ 1fr;
+    grid-template-areas: "pic" "art" "art" "art";
+  }
+
+  .pic{
+    background-size: contain;
+    background-position: center;
+    padding: 1%;
+    height: 100%;
+  }
+
+  .article{
+    padding-left: 1%;
+  }
+}
+/*------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 640px) and (max-width: 1139px) {
+  .wrapper {
+    grid-template: 110px 5fr 6fr 5fr 3fr 125px/ 1.7fr 3fr;
+    grid-template-areas: "hd hd" "sd cont" "xx cont" "xx cont" "xx cont" "ft ft";
+    border: #222222 solid 1px;
+  }
+
+  .mainheader{
+    text-align: center;
+  }
+
+  .content{
+    grid-template: 1.5fr 2fr 2fr 2fr/ 1fr;
+    grid-template-areas: "pic" "art" "art" "art";
+    flex-flow: column nowrap;
+  }
+
+  .pic{
+    background-position: center;
+    padding: 1%;
+    height: 100%;
+    background-size: contain;
+  }
+
+  .article{
+    padding-left: 3%;
+    height: 80%;
+    font-size: 1.12em;
+  }
+
+  .sidebar {
+    width: 29vw;
+    font-size: 0.75em;
+    height: 75%;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 639px) {
+  .wrapper {
+    font-size: .8em;
+    grid-template: 135px 140px 100px 2000px 100px/ 1fr;
+    grid-template-areas: "hd" "sd" "sd" "cont" "ft";
+  }
+
+  .mainheader{
+    text-align: center;
+  }
+
+  .sidebar{
+    width: 93.4%;
+    font-size: 0.6em;
+    border: #222222 solid 1px;
+  }
+
+  #gebside, #nutside{
+    font-size: 0.5em;
+  }
+
+  .subscription{
+    border: none;
+  }
+
+  .content{
+    grid-template: 6fr 1fr / 1fr;
+    grid-template-areas: "pic" "art";
+  }
+
+  .pic{
+    background-position: center;
+    margin: 0;
+    background-size: contain;
+  }
+
+  .article{
+    padding-left: 3%;
+    height: 80%;
+  }
+
+  #gebart, #osirisart, #isisart, #setart, #nephthysart{
+    font-size: 0.9em;
+  }
+
+  #nutart{
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrapper {
+    font-size: .7em;
+    margin: 0;
+    grid-template: 115px 130px 110px 1600px 75px/ 1fr;
+    grid-template-areas: "hd" "sd" "sd" "cont" "ft";
+  }
+
+  .mainheader{
+    text-align: center;
+  }
+
+  .sidebar{
+    width: 93.4%;
+    font-size: 0.65em;
+    border: #222222 solid 1px;
+  }
+
+  .subscription{
+    border: none;
+  }
+
+  .content{
+    grid-template: 6fr 1fr / 1fr;
+    grid-template-areas: "pic" "art";
+  }
+
+  .pic{
+    background-position: center;
+    margin-top: 1%;
+    background-size: contain;
+  }
+
+  .article{
+    font-size: 0.9em;
+    padding-left: 3%;
+    height: 80%;
+  }
+
+  #osirisart{
+    font-size: 0.87em;
+  }
+}
+

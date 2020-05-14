@@ -1,0 +1,37 @@
+html {
+  font-size: 1em;
+  font-family: "anironregular";
+  color: #000000;
+  line-height: 1.4;
+  background-color: #000000;
+}
+
+@font-face {
+  font-family: "anironregular";
+  src: url("../fonts/anirm___-webfont.woff2") format("woff2"),
+  url("../fonts/anirm___-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+::-moz-selection {
+  background: #b19353;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b19353;
+  text-shadow: none;
+}
+
+/*
+==========================================================================
+Browser Upgrade Prompt
+==========================================================================
+*/
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}

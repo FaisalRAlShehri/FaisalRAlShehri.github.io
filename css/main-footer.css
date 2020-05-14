@@ -1,0 +1,7 @@
+.footer {
+  display: grid;
+  grid-area: ft;
+  justify-content: center;
+  text-align: center;
+  border: #222222 solid 1px;
+}
